@@ -102,3 +102,18 @@ dist
 
 # TernJS port file
 .tern-port
+
+#
+.DS_Store
+ds_store
+thumbs.db
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sw*
+
+# Ignore technical project files
+node_modules
+package-lock.json
+dist
