@@ -38,11 +38,11 @@ function combineHtml(){
 function convertFonts() {
       src('src/fonts/*.ttf')
       .pipe(ttfToWoff2())
-      .pipe(dest('public/fonts/'))
+      .pipe(dest('dist/fonts/'))
 
    return src('src/fonts/*.ttf')
       .pipe(ttfToWoff())
-      .pipe(dest('public/fonts/'))
+      .pipe(dest('dist/fonts/'))
 
 }
 
