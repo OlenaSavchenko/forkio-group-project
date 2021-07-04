@@ -11,6 +11,6 @@ Olena Savchenko - features & pricing sections
 
 <!-- add descr -->
 
-Yuliya Boiko -
+Yuliya Boiko -  People Are Talking About Fork & header
 
 Working page:
