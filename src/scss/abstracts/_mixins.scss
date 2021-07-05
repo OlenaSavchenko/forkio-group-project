@@ -4,3 +4,11 @@
   color: $color;
   font-weight: $fw;
 }
+
+@mixin btn-styles($bg-color, $text-color, $fw: "400", $border-rad: 40px) {
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: $fw;
+  border-radius: $border-rad;
+  transition: 0.3s;
+}
