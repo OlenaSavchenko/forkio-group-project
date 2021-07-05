@@ -1,0 +1,48 @@
+.header {
+   background: url("../img/header/jpg/header-bg.jpg") no-repeat;
+   background-position: center;
+   background-size: cover;
+   padding-bottom: 456px;
+   text-align: center;
+   position: relative;
+
+   &__title {
+      @include font(82, $light-text-color, 82, 700);
+      margin-bottom: 19px;
+   }
+
+   &__descr {
+      @include font(30, #8d81ac, 30);
+      font-family: $descr-font-fam;
+      margin-bottom: 19px;
+   }
+
+   &__details {
+      color: $mid-text-color;
+      text-transform: uppercase;
+   }
+}
+
+.download {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   bottom: calc(0% - 60px);
+   left: calc(50% - 195px);
+
+   &__link {
+      @include btn-styles($accent-color, $light-text-color, 700);
+      padding: 20px 62px;
+      border: 1px solid transparent;
+      font-size: 21px;
+      margin-bottom: 19px;
+
+      &:hover {
+         @extend %btn-hover;
+      }
+   }
+
+   &__text {
+      @include font(15, $mid-text-color, 14);
+   }
+}
