@@ -114,6 +114,4 @@ thumbs.db
 *.sw*
 
 # Ignore technical project files
-node_modules
 package-lock.json
-dist
