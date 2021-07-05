@@ -1,12 +1,15 @@
 .editor {
+  margin-bottom: 120px;
   &__title {
     @include font(28, #635c73, 26, 700);
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 27px;
   }
   &__content {
     @include font(20, $dark-text-color, 14);
     text-align: center;
+    margin-bottom: 36px;
   }
   &__list {
     display: flex;
