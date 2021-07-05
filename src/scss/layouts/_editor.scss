@@ -1,0 +1,18 @@
+.editor {
+  &__title {
+    @include font(28, #635c73, 26, 700);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__content {
+    @include font(20, $dark-text-color, 14);
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+  }
+  &__svg {
+    width: 16px;
+    height: 16px;
+  }
+}
