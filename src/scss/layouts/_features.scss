@@ -1,0 +1,18 @@
+.features {
+  &__title {
+    margin-bottom: 36px;
+    @include font(38, $accent-color, 32, 700);
+    text-align: center;
+  }
+  //   &__list {
+  //   }
+  &__item {
+    @include font(16, $dark-text-color);
+  }
+  &__content {
+    @include font(21, $mid-text-color, 14);
+    font-family: $descr-font-fam;
+  }
+  //   &__img {
+  //   }
+}
