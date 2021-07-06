@@ -6,11 +6,13 @@
 
   &__item {
     margin: 0 10px 0 0;
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
     &:hover .github-counter__link--graphic {
       background-color: #a8b5c225;
+    }
+  }
+  &__item:not(:last-child) {
+    @media (max-width: 481px) {
+      margin-bottom: 20px;
     }
   }
 
@@ -21,6 +23,7 @@
     box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04),
       inset 0 1px 0 rgba(255, 255, 255, 0.25);
     vertical-align: middle;
+
     &--graphic {
       background-color: #fafbfc;
       border-bottom-left-radius: 6px;
@@ -28,6 +31,7 @@
       transition-property: background-color;
       transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
     }
+
     &--counter {
       font-weight: 600;
       background-color: #fff;
@@ -38,9 +42,9 @@
   }
 
   &__svg {
-    width: 16px;
-    height: 16px;
     display: inline-block;
     vertical-align: text-top;
-    }
+    width: 16px;
+    height: 16px;
+  }
 }
