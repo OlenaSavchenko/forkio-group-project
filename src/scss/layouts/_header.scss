@@ -9,17 +9,46 @@
    &__title {
       @include font(82, $light-text-color, 82, 700);
       margin-bottom: 19px;
+
+      @media (max-width: 992px) {
+         font-size: 72px;
+         line-height: 72px;
+      }
+      @media (max-width: 480px) {
+         font-size: 48px;
+         line-height: 48px;
+      }
    }
 
    &__descr {
       @include font(30, #8d81ac, 30);
       font-family: $descr-font-fam;
       margin-bottom: 19px;
+
+      @media (max-width: 992px) {
+         font-size: 24px;
+         line-height: 24px;
+      }
+      @media (max-width: 580px) {
+         font-size: 18px;
+         margin-bottom: 14px;
+      }
+      @media (max-width: 480px) {
+         max-width: 300px;
+         margin: 0 auto;
+         margin-bottom: 14px;
+      }
    }
 
    &__details {
       color: $mid-text-color;
       text-transform: uppercase;
+
+      @media (max-width: 992px) {
+         font-size: 14px;
+         line-height: 14px;
+      }
+
    }
 }
 
@@ -37,12 +66,25 @@
       font-size: 21px;
       margin-bottom: 19px;
 
-      &:hover {
+      &:hover,
+      &:focus {
          @extend %btn-hover;
       }
-   }
 
+      @media (max-width: 480px) {
+         font-size: 18px;
+         line-height: 20px;
+         padding: 12px 29px;
+         margin-bottom: 12px;
+      }
+   }
+   
    &__text {
       @include font(15, $mid-text-color, 14);
+   }
+
+   @media (max-width: 480px) {
+      left: calc(50% - 144.5px);
+      bottom: calc(0% - 47px);
    }
 }
