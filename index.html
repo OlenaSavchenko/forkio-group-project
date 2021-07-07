@@ -103,10 +103,16 @@
       </li>
     </ul>
     <img
-      src="../img/features/jpg/features-mb.jpg"
+      srcset="
+        ./dist/img/features/jpg/features-mb.jpg     317w,
+        ./dist/img/features/jpg/features-tablet.jpg 700w
+      "
+      sizes="(min-width: 768px) 700px, 317px"
+      src="./dist/img/features/jpg/features-mb.jpg"
       alt="code-editor-picture"
       class="features__img"
     />
+    
   </div>
 </section>
 
