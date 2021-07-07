@@ -48,7 +48,9 @@
          font-size: 14px;
          line-height: 14px;
       }
-
+   }
+   @media (max-width: 480px) {
+      padding-bottom: 416px;
    }
 }
 
@@ -78,7 +80,7 @@
          margin-bottom: 12px;
       }
    }
-   
+
    &__text {
       @include font(15, $mid-text-color, 14);
    }
