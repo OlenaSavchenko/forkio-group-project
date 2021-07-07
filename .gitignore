@@ -115,3 +115,4 @@ thumbs.db
 
 # Ignore technical project files
 package-lock.json
+/index.html
