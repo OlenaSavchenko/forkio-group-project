@@ -6,7 +6,10 @@
   }
   //   &__list {
   //   }
-  &__item {
+  //   &__item {
+
+  //   }
+  &__item-title {
     @include font(16, $dark-text-color);
   }
   &__content {
