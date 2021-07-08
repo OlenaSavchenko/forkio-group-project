@@ -1,8 +1,8 @@
 <section class="features">
-  <div class="container">
+  <div class="container features__container">
     <h2 class="features__title">&ltHere is what you get&gt</h2>
     <ul class="features__list">
-      <li class="features__item">
+      <li class="features__item features__item--search-icon">
         <h3 class="features__item-title">Creatred to Make The Web Better</h3>
         <p class="features__content">
           Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui
@@ -10,7 +10,7 @@
           ut augue.
         </p>
       </li>
-      <li class="features__item">
+      <li class="features__item features__item--tools-icon">
         <h3 class="features__item-title">Incredibly Powerful Tool</h3>
         <p class="features__content">
           Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
@@ -18,7 +18,7 @@
           luctus. Aliquam erat volutpat.
         </p>
       </li>
-      <li class="features__item">
+      <li class="features__item features__item--flask-icon">
         <h3 class="features__item-title">Experimental Stuff</h3>
         <p class="features__content">
           Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
@@ -26,7 +26,7 @@
           luctus. Aliquam erat volutpat.
         </p>
       </li>
-      <li class="features__item">
+      <li class="features__item features__item--circle-icon">
         <h3 class="features__item-title">Creatred to Make The Web Better</h3>
         <p class="features__content">
           Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
@@ -36,15 +36,16 @@
       </li>
     </ul>
 
-    <img
-      srcset="
-        ./dist/img/features/jpg/features-mb.jpg     317w,
-        ./dist/img/features/jpg/features-tablet.jpg 700w
-      "
-      sizes="(min-width: 768px) 700px, 317px"
-      src="./dist/img/features/jpg/features-mb.jpg"
-      alt="code-editor-picture"
-      class="features__img"
-    />
+    <div class="features__img-box">
+      <img
+        srcset="
+          ./dist/img/features/jpg/features-mb.jpg     317w,
+          ./dist/img/features/jpg/features-tablet.jpg 700w
+        "
+        sizes="(min-width: 768px) 700px, 317px"
+        src="./dist/img/features/jpg/features-mb.jpg"
+        alt="code-editor-picture"
+      />
+    </div>
   </div>
 </section>

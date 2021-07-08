@@ -1,20 +1,19 @@
 .features {
-  padding-bottom: 6px;
   text-align: center;
-  position: relative;
-  @media (min-width: 481px) {
-    padding-bottom: 0;
+  @media (max-width: 480px) {
+    padding-bottom: 6px;
   }
   @media (min-width: 993px) {
-    display: flex;
     padding: 33px 0 94px;
     background-color: #f4f4f4;
   }
-
-  //   &__container {
-
-  //   }
-
+  &__container {
+    @media (min-width: 993px) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+    }
+  }
   &__title {
     margin-bottom: 36px;
     @include font(38, $accent-color, 32, 700);
@@ -31,29 +30,58 @@
 
   &__list {
     margin-bottom: 64px;
+
     @media (min-width: 481px) {
       margin-bottom: 76px;
       text-align: left;
     }
     @media (min-width: 993px) {
       margin-bottom: 0;
-      width: 50%;
+      // width: 50%;
     }
   }
 
   &__item {
     position: relative;
+    &:not(:last-child) {
+      margin-bottom: 38px;
+      @media (min-width: 481px) {
+        margin-bottom: 61px;
+      }
+      @media (min-width: 993px) {
+        margin-bottom: 35px;
+      }
+    }
+    //icons base styles
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 auto 27px;
+      @media (min-width: 481px) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: auto;
+      }
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 38px;
-    @media (min-width: 481px) {
-      margin-bottom: 61px;
-    }
-    @media (min-width: 993px) {
-      margin-bottom: 35px;
+  //icons svg
+  @each $icon, $width, $height in (search-icon, 111, 64), (tools-icon, 90, 80),
+    (flask-icon, 60, 84), (circle-icon, 71, 71)
+  {
+    &__item--#{$icon}::before {
+      background: center /
+        auto
+        no-repeat
+        url("../img/features/svg/#{$icon}.svg");
+      width: #{$width}px;
+      height: #{$height}px;
     }
   }
+
   &__item-title {
     margin-bottom: 14px;
     @include font(16, $dark-text-color);
@@ -61,24 +89,6 @@
       margin-bottom: 15px;
       padding-left: 134px;
       @include font(21, $dark-text-color, 16);
-    }
-  }
-  &__item::before {
-    content: "";
-    display: block;
-    height: 76px;
-    width: 76px;
-    border: 3px solid black;
-    background-repeat: no-repeat;
-    margin: 0 auto 27px;
-    background-image: url(./dist/img/features/svg/flask-icon.svg);
-    @media (min-width: 481px) {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      overflow: auto;
     }
   }
 
@@ -91,12 +101,10 @@
       font-family: $main-font-fam;
     }
   }
-
-  &__img {
-    position: absolute;
-    right: 0;
-    @media (min-width: 993px) {
-      top: 159px;
-    }
+  &__img-box {
+    display: flex;
+    justify-content: flex-end;
+    //review!!!
+    margin-right: -10px;
   }
 }
