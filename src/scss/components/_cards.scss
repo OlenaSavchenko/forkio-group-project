@@ -4,11 +4,12 @@
     flex-wrap: wrap;
     align-items: center;
   }
-  @media (min-width: 481px) and(max-width: 993px) {
+  @media (min-width: 481px) and(max-width: 992px) {
     width: 580px;
   }
   @media (min-width: 993px) {
     flex-wrap: nowrap;
+    justify-content: center;
   }
   &__item {
     margin: 0 auto;
@@ -17,7 +18,7 @@
     background-color: #ffffff1c;
     text-align: center;
     @media (min-width: 481px) {
-      width: 257px;
+      max-width: 257px;
     }
     &:not(:last-child) {
       @media (max-width: 481px) {
@@ -31,17 +32,6 @@
     &:nth-child(2n) {
       @media (min-width: 481px) and (max-width: 992px) {
         margin-bottom: 30px;
-      }
-    }
-    &:first-child > .cards__legal {
-      @media (min-width: 481px) {
-        margin-bottom: 58px;
-      }
-      @media (min-width: 993px) {
-        margin-bottom: 48px;
-        &::before {
-          margin-bottom: 36px;
-        }
       }
     }
   }
@@ -80,6 +70,17 @@
     }
     @media (min-width: 481px) {
       @include font(18, $light-text-color, 16);
+    }
+    &--student {
+      @media (min-width: 481px) {
+        margin-bottom: 58px;
+      }
+      @media (min-width: 993px) {
+        margin-bottom: 48px;
+        &::before {
+          margin-bottom: 36px;
+        }
+      }
     }
   }
 
@@ -128,9 +129,7 @@
       padding: 18px 48px;
       @include font(18, $light-text-color, 16);
       &:hover {
-        @extend%btn-hover;
-        border: none;
-        transition: background-color 200ms linear;
+        color: $accent-color;
       }
     }
   }
