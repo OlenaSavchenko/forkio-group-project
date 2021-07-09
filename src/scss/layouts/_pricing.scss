@@ -1,0 +1,29 @@
+.pricing {
+  padding: 14px 0 4px;
+  background-image: url("../img/pricing/pricing-mb.jpg");
+  background-size: cover;
+  text-align: center;
+  @media (min-width: 481px) {
+    padding: 88px 0 94px;
+    background-image: url("../img/pricing/pricing-tablet.jpg");
+  }
+  @media (min-width: 993px) {
+    padding: 114px 0 97px;
+    background-image: url("../img/pricing/pricing-desktop.jpg");
+  }
+  &__title {
+    margin-bottom: 32px;
+    @include font(42, $light-text-color, 28, 700);
+    @media (min-width: 481px) {
+      margin-bottom: 39px;
+      @include font(42, $light-text-color, 44, 700);
+    }
+    @media (min-width: 993px) {
+      margin-bottom: 61px;
+      @include font(50, $light-text-color, 48, 700);
+    }
+  }
+    &__list {
+      margin: 0 auto;
+    }
+}
