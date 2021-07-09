@@ -1,0 +1,37 @@
+.editor {
+  padding: 130px 0 120px;
+  @media (min-width: 481px) {
+    padding: 155px 0 160px;
+  }
+  @media (min-width: 993px) {
+    padding: 130px 0 70px;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    @include font(28, #635c73, 26, 700);
+    text-transform: uppercase;
+    text-align: center;
+    @media (min-width: 481px) {
+      margin-bottom: 33px;
+      @include font(42, #635c73, 42, 700);
+    }
+    @media (min-width: 993px) {
+      margin-bottom: 35px;
+      @include font(54, #635c73, 54, 700);
+    }
+  }
+
+  &__content {
+    margin-bottom: 36px;
+    @include font(20, $dark-text-color, 14);
+    text-align: center;
+    @media (min-width: 481px) {
+      margin-bottom: 24px;
+      @include font(32, $dark-text-color, 21);
+    }
+    @media (min-width: 993px) {
+      margin-bottom: 13px;
+    }
+  }
+}

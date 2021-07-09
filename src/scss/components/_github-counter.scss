@@ -1,0 +1,50 @@
+.github-counter {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    margin: 0 10px 0 0;
+    &:hover .github-counter__link--graphic {
+      background-color: #a8b5c225;
+    }
+  }
+  &__item:not(:last-child) {
+    @media (max-width: 481px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    @include font(20, #24292e, 12, 500);
+    padding: 3px 12px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    vertical-align: middle;
+
+    &--graphic {
+      background-color: #fafbfc;
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+      transition-property: background-color;
+      transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    }
+
+    &--counter {
+      font-weight: 600;
+      background-color: #fff;
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      border-left: 0;
+    }
+  }
+
+  &__svg {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+  }
+}
