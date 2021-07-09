@@ -84,17 +84,14 @@
   }
 
   &__link {
+    @include btn-styles(#ffffff26, $light-text-color);
     display: inline-block;
     padding: 14px 36px;
-    background-color: #ffffff26;
-    border-radius: 40px;
     @include font(15, $light-text-color, 15);
     text-transform: uppercase;
-    transition: background-color 200ms linear;
     &:hover {
       @extend%btn-hover;
       border: none;
-      transition: background-color 200ms linear;
     }
   }
 
