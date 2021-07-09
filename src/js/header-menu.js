@@ -22,4 +22,13 @@
       }
    });
 
+   // add/delete active link in menu
+   menuList.addEventListener('click', function(e){
+      if(e.target.closest('.menu__item')){
+         let active = menuList.querySelector('.menu__link--active');
+         active.classList.remove('menu__link--active');
+         e.target.classList.add('menu__link--active');
+      }
+   })
+
 })();
