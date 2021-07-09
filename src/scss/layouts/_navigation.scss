@@ -13,7 +13,7 @@
          padding-bottom: 30px;
          margin-bottom: 50px;
 
-         &::before{
+         &::before {
             content: "";
             position: absolute;
             top: 0;
@@ -109,9 +109,7 @@
       }
 
       @media (max-width: 480px) {
-         padding: 20px 0;
-         border-bottom: 3px solid #3B3B3B;
-        
+         border-bottom: 3px solid #3b3b3b;
       }
    }
 
@@ -120,29 +118,38 @@
       transition: 0.3s;
       text-transform: capitalize;
       padding: 12px 0;
+      position: relative;
 
-      &:hover,
-      &:focus {
-         color: $light-text-color;
+      @media (min-width: 481px) {
+         &:hover,
+         &:focus {
+            color: $light-text-color;
+         }
       }
-
       @media (max-width: 480px) {
          font-size: 26px;
          line-height: 26px;
          font-weight: 400;
          text-align: left;
-         padding: 20px 10px 20px 35px;
+         padding: 40px 10px 40px 35px;
          display: block;
-         border-left: 8px solid transparent;
-         color: $light-text-color;
-         
 
-         &:active,
+         color: $light-text-color;
+
          &:focus,
-         &:hover{
-            border-left: 8px solid $accent-color;
+         &:hover,
+         &--active {
             color: $accent-color;
-            
+         }
+
+         &--active::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(50% - 26.5px);
+            width: 8px;
+            height: 53px;
+            background-color: $accent-color;
          }
       }
    }
@@ -162,7 +169,7 @@
    @media (max-width: 480px) {
       position: absolute;
       top: -500px;
-      
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
