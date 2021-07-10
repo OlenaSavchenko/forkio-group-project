@@ -1,14 +1,21 @@
 .cards {
   @media (min-width: 620px) {
     display: grid;
+  }
+  @media (min-width: 620px) and (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px 25px;
   }
   @media (min-width: 993px) {
-    grid-template-columns: 257px 257px 299px 257px;
-    column-gap: 15px;
-    row-gap: 0;
+    grid-template-columns: repeat(2, minmax(227px, 257px)) 280px minmax(
+        227px,
+        257px
+      );
+    // column-gap: 5px;
+    // row-gap: 0;
     align-items: center;
+    // justify-content: space-between;
+    justify-items: center;
   }
   &__item {
     padding-bottom: 36px;
@@ -18,7 +25,10 @@
     @media (max-width: 619px) {
       margin: 0 auto;
     }
-    @media (min-width: 620px) {
+    @media (min-width: 620px) and (max-width: 992) {
+      width: 257px;
+    }
+    @media (min-width: 1135px) {
       width: 257px;
     }
     &:not(:last-child) {
@@ -27,7 +37,7 @@
       }
     }
     &:first-child {
-      @media (min-width: 620px) {
+      @media (min-width: 620px) and (max-width: 992px) {
         justify-self: right;
       }
     }
@@ -38,8 +48,8 @@
       }
     }
 
-    @media (min-width: 620px) and(max-width: 992px) {
-    }
+    // @media (min-width: 620px) and(max-width: 992px) {
+    // }
   }
   &__title {
     margin-bottom: 30px;
@@ -103,10 +113,19 @@
   }
 
   &__item--accent {
-    width: 299px;
+    @media (min-width: 620px) and (max-width: 992px) {
+      width: 299px;
+    }
+    @media (min-width: 993px) and (max-width: 1134px) {
+      width: 280px;
+    }
+    @media (min-width: 1135px) {
+      width: 299px;
+    }
+    // width: 299px;
     padding-bottom: 47px;
     background-color: #463048d6;
-    @media (min-width: 620px) {
+    @media (min-width: 620px) and (max-width: 992px) {
       justify-self: right;
     }
     .cards__title {
