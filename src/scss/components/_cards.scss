@@ -1,22 +1,32 @@
 .cards {
   @media (min-width: 620px) {
     display: grid;
+    justify-content: center;
   }
   @media (min-width: 620px) and (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px 25px;
   }
-  @media (min-width: 993px) {
+
+  @media (min-width: 993px) and (max-width: 1134px) {
+    align-items: center;
+    justify-items: center;
+    column-gap: 5px;
     grid-template-columns: repeat(2, minmax(227px, 257px)) 280px minmax(
         227px,
         257px
       );
-    // column-gap: 5px;
-    // row-gap: 0;
-    align-items: center;
-    // justify-content: space-between;
-    justify-items: center;
   }
+  @media (min-width: 1135px) {
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(227px, 257px)) 299px minmax(
+        227px,
+        257px
+      );
+    justify-content: space-between;
+  }
+
   &__item {
     padding-bottom: 36px;
     background-color: #ffffff1c;
@@ -35,9 +45,12 @@
       @media (max-width: 619px) {
         margin-bottom: 18px;
       }
+      @media (min-width: 993px) and (max-width: 1134px) {
+        justify-self: left;
+      }
     }
     &:first-child {
-      @media (min-width: 620px) and (max-width: 992px) {
+      @media (min-width: 620px) {
         justify-self: right;
       }
     }
@@ -45,6 +58,9 @@
     &:nth-child(4n) {
       @media (min-width: 620px) {
         align-self: center;
+      }
+      @media (min-width: 993px) and (max-width: 1134px) {
+        justify-self: right;
       }
     }
 
