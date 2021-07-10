@@ -11,8 +11,14 @@
     }
   }
   &__item:not(:last-child) {
-    @media (max-width: 481px) {
+    @media (max-width: 480px) {
       margin-bottom: 20px;
+    }
+  }
+  &__item:last-child {
+    @media (max-width: 480px) {
+      width: 100%;
+      text-align: center;
     }
   }
 

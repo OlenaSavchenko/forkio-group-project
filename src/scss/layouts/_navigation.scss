@@ -1,0 +1,251 @@
+.header {
+   &__nav {
+      padding: 30px 0 18px;
+      margin-bottom: 94px;
+      position: relative;
+
+      @media (max-width: 992px) {
+         background-color: #27262a;
+         margin-bottom: 70px;
+      }
+
+      @media (max-width: 480px) {
+         padding-bottom: 30px;
+         margin-bottom: 50px;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: #27262a;
+            z-index: 2;
+         }
+      }
+   }
+
+   &__nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      @media (max-width: 992px) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__logo-link {
+      line-height: 0;
+      @media (max-width: 480px) {
+         z-index: 3;
+      }
+   }
+
+   &__logo {
+      fill: $accent-color;
+      transition: 0.3s;
+
+      &:hover {
+         fill: $light-text-color;
+      }
+
+      @media (max-width: 992px) {
+         order: 1;
+      }
+
+      @media (max-width: 480px) {
+         width: 43px;
+      }
+   }
+   &__logo-name {
+      @media (max-width: 480px) {
+         display: none;
+      }
+   }
+
+   &__buy-link {
+      @include btn-styles($accent-color, $light-text-color, 700);
+      padding: 11px 35px;
+      border: 1px solid transparent;
+
+      &:hover,
+      &:focus {
+         @extend %btn-hover;
+      }
+
+      @media (max-width: 992px) {
+         order: 2;
+      }
+
+      @media (max-width: 480px) {
+         font-size: 15px;
+         line-height: 15px;
+         padding: 11px 25px;
+         order: 2;
+         z-index: 3;
+      }
+   }
+}
+
+.menu {
+   display: flex;
+   margin-left: auto;
+   margin-right: 48px;
+   transition: 0.4s;
+
+   &__item {
+      &:not(:last-child) {
+         margin-right: 48px;
+
+         @media (max-width: 555px) {
+            margin-right: 24px;
+         }
+         @media (max-width: 480px) {
+            margin-right: 0;
+         }
+      }
+
+      @media (max-width: 480px) {
+         border-bottom: 3px solid #3b3b3b;
+      }
+   }
+
+   &__link {
+      @include font(17, $accent-color, 16, 700);
+      transition: 0.3s;
+      text-transform: capitalize;
+      padding: 12px 0;
+      position: relative;
+
+      @media (min-width: 481px) {
+         &:hover,
+         &:focus {
+            color: $light-text-color;
+         }
+      }
+      @media (max-width: 480px) {
+         font-size: 26px;
+         line-height: 26px;
+         font-weight: 400;
+         text-align: left;
+         padding: 40px 10px 40px 35px;
+         display: block;
+
+         color: $light-text-color;
+
+         &:focus,
+         &:hover,
+         &--active {
+            color: $accent-color;
+         }
+
+         &--active::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(50% - 26.5px);
+            width: 8px;
+            height: 53px;
+            background-color: $accent-color;
+         }
+      }
+   }
+
+   @media (max-width: 992px) {
+      order: 3;
+      margin-right: 0;
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+   }
+
+   @media (max-width: 555px) {
+      font-size: 15px;
+   }
+
+   @media (max-width: 480px) {
+      position: absolute;
+      top: -500px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      display: block;
+      background-color: #333;
+      z-index: 1;
+
+      &--open {
+         top: 50px;
+      }
+   }
+}
+
+.burger {
+   display: none;
+   order: 3;
+   cursor: pointer;
+   width: 26px;
+   height: 21px;
+   background-color: transparent;
+   position: relative;
+
+   &__line {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background-color: $light-text-color;
+      border-radius: 50px;
+      transition: transform 0.4s;
+      transform: rotate(180deg);
+
+      &::before,
+      &::after {
+         content: "";
+         background-color: $light-text-color;
+         position: absolute;
+         left: 0;
+         height: 3px;
+         border-radius: 50px;
+         transition: 0.4s;
+      }
+      &::before {
+         width: 15px;
+         top: 8px;
+      }
+      &::after {
+         width: 26px;
+         bottom: 8px;
+      }
+
+      // Burger Open
+      // span - second line
+      &--open {
+         transition: 0.4s;
+         transform: rotate(135deg);
+         transition: 0.4s;
+
+         // first line
+         &::before {
+            // background-color: red;
+            transform: rotate(-90deg) translateY(5px);
+            opacity: 0;
+            transition: 0.2;
+         }
+
+         // third line
+         &::after {
+            // background-color: blueviolet;
+            transform: rotate(90deg) translateX(8px);
+            transition: 0.4s;
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      display: block;
+      z-index: 3;
+   }
+}
