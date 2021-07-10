@@ -1,0 +1,30 @@
+[
+  {
+    "title": "students",
+    "price": "29",
+    "legal": "Personal License",
+    "classStudent": "cards__legal cards__legal--student",
+    "classAccent": "cards__item"
+  },
+  {
+    "title": "professional",
+    "price": "59",
+    "legal": "Professional License<br/>Email Support",
+    "classStudent": "cards__legal",
+    "classAccent": "cards__item cards__item--accent"
+  },
+  {
+    "title": "agency",
+    "price": "99",
+    "legal": "1-12 Team Members<br/>Support",
+    "classStudent": "cards__legal",
+    "classAccent": "cards__item"
+  },
+  {
+    "title": "enterprise",
+    "price": "159",
+    "legal": "Unlimited Team Members <br/>24/ 7 Phone Support",
+    "classStudent": "cards__legal",
+    "classAccent": "cards__item"
+  }
+]

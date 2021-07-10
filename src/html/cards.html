@@ -1,6 +1,9 @@
 <ul class="pricing__list cards">
-  <li class="cards__item">
-    <h3 class="cards__title s">Students</h3>
+  @@loop("./components/cards/card-item.html",
+  "./components/cards/card-item.json")
+
+  <!-- <li class="cards__item">
+    <h3 class="cards__title">Students</h3>
     <p class="cards__price">$<span class="cards__price--value">29</span></p>
     <p class="cards__period">per month</p>
     <p class="cards__legal cards__legal--student">Personal License</p>
@@ -35,5 +38,5 @@
       24/ 7 Phone Support
     </p>
     <a href="#" class="cards__link">purchase</a>
-  </li>
+  </li> -->
 </ul>
