@@ -11,14 +11,14 @@
     "price": "59",
     "legal": "Professional License<br/>Email Support",
     "classStudent": "cards__legal",
-    "classAccent": "cards__item cards__item--accent"
+    "classAccent": "cards__item"
   },
   {
     "title": "agency",
     "price": "99",
     "legal": "1-12 Team Members<br/>Support",
     "classStudent": "cards__legal",
-    "classAccent": "cards__item"
+    "classAccent": "cards__item cards__item--accent"
   },
   {
     "title": "enterprise",
