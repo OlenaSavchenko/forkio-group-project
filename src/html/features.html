@@ -1,51 +1,24 @@
 <section class="features">
-  <div class="container features__container">
-    <h2 class="features__title">&ltHere is what you get&gt</h2>
-    <ul class="features__list">
-      <li class="features__item features__item--search-icon">
-        <h3 class="features__item-title">Creatred to Make The Web Better</h3>
-        <p class="features__content">
-          Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui
-          laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget
-          ut augue.
-        </p>
-      </li>
-      <li class="features__item features__item--tools-icon">
-        <h3 class="features__item-title">Incredibly Powerful Tool</h3>
-        <p class="features__content">
-          Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-          ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida
-          luctus. Aliquam erat volutpat.
-        </p>
-      </li>
-      <li class="features__item features__item--flask-icon">
-        <h3 class="features__item-title">Experimental Stuff</h3>
-        <p class="features__content">
-          Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-          ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida
-          luctus. Aliquam erat volutpat.
-        </p>
-      </li>
-      <li class="features__item features__item--circle-icon">
-        <h3 class="features__item-title">Creatred to Make The Web Better</h3>
-        <p class="features__content">
-          Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-          ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida
-          luctus. Aliquam erat volutpat.
-        </p>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="features__container">
+      <ul class="features__list">
+        @@loop("./components/features/features-item.html",
+        "./components/features/features-item.json")
+      </ul>
 
-    <div class="features__img-box">
-      <img
-        srcset="
-          ./dist/img/features/jpg/features-mb.jpg     317w,
-          ./dist/img/features/jpg/features-tablet.jpg 700w
-        "
-        sizes="(min-width: 768px) 700px, 317px"
-        src="./dist/img/features/jpg/features-mb.jpg"
-        alt="code-editor-picture"
-      />
+      <div class="features__img-box">
+        <h2 class="features__title">&ltHere is what you get&gt</h2>
+        <img
+          srcset="
+            ./dist/img/features/png/features-mb.png     317w,
+            ./dist/img/features/png/features-tablet.png 700w
+          "
+          sizes="(min-width: 768px) 700px, 317px"
+          src="./dist/img/features/png/features-mb.png"
+          alt="code-editor-picture"
+          class="features__img"
+        />
+      </div>
     </div>
   </div>
 </section>
