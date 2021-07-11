@@ -8,10 +8,16 @@
     background-color: #f4f4f4;
   }
   &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: " title" "list" "image";
     @media (min-width: 993px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      // grid-template-areas: "list title image";
+      grid-template-rows: 89px auto; // обрезать картинку и поставить высоту 88px
+      grid-template-areas:
+        "list title"
+        "list image";
       column-gap: 49px;
     }
   }
@@ -22,31 +28,17 @@
       margin-bottom: 50px;
       @include font(44, $accent-color, 42, 700);
     }
-
-    // @media (min-width: 481px) and (max-width: 992px) {
-
-    // }
+    grid-area: title;
     @media (min-width: 993px) {
-      margin-bottom: 19px;
       @include font(50, $accent-color, 48, 700);
-      // text-align: right;
-      grid-area: title;
-      align-self: flex-end;
-      justify-self: left;
     }
   }
-
   &__list {
     margin-bottom: 64px;
+    grid-area: list;
     @media (min-width: 481px) {
       margin-bottom: 76px;
       text-align: left;
-    }
-    @media (min-width: 993px) {
-      justify-self: right;
-      // margin-bottom: 0;
-      grid-area: list;
-      // width: 50%;
     }
   }
 
@@ -76,7 +68,6 @@
       }
     }
   }
-
   //icons svg
   @each $icon, $width, $height in (search-icon, 111, 64), (tools-icon, 90, 80),
     (flask-icon, 60, 84), (circle-icon, 71, 71)
@@ -90,7 +81,6 @@
       height: #{$height}px;
     }
   }
-
   &__item-title {
     margin-bottom: 14px;
     @include font(16, $dark-text-color);
@@ -100,7 +90,6 @@
       @include font(21, $dark-text-color, 16);
     }
   }
-
   &__content {
     @include font(21, $mid-text-color, 14);
     font-family: $descr-font-fam;
@@ -110,22 +99,11 @@
       font-family: $main-font-fam;
     }
   }
-  &__img-box {
-    display: flex;
-    justify-content: flex-end;
-    grid-area: box;
-    //review!!!
-    // margin-right: -10px;
-    @media (min-width: 993px) {
-      display: grid;
-      align-self: center;
-    }
-    &__img {
-      // display: block;
-      // width: 100%;
-      @media (min-width: 993px) {
-        grid-area: image;
-      }
-    }
+  &__img {
+    display: block;
+    width: 60vw;
+    height: 100%;
+    object-fit: cover;
+    grid-area: image;
   }
 }
