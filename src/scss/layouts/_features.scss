@@ -1,5 +1,6 @@
 .features {
   text-align: center;
+  overflow: hidden;
   @media (max-width: 480px) {
     padding-bottom: 22px;
   }
@@ -17,16 +18,25 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "list" "image";
+
     @media (min-width: 993px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 110px auto;
+      grid-template-columns: minmax(500px, 540px) 1fr;
+      // grid-template-rows: 88px auto;
       grid-template-areas:
         "list title"
         "list image";
       column-gap: 2%;
     }
-    @media (min-width: 1197px) {
+
+    @media (min-width: 993px) and(max-width:1115px) {
+      grid-template-rows: 60px auto;
+    }
+    @media (min-width: 1116px) {
       grid-template-rows: 88px auto;
+    }
+
+    @media (min-width: 1197px) {
+      // grid-template-rows: 88px auto;
       column-gap: 1%;
     }
   }
@@ -39,8 +49,13 @@
       margin-bottom: 50px;
       @include font(44, $accent-color, 42, 700);
     }
-    @media (min-width: 993px) {
+    @media (min-width: 993px) and(max-width:1115px) {
+      @include font(50, $accent-color, 38, 700);
+      text-align: left;
+    }
+    @media (min-width: 1116px) {
       @include font(50, $accent-color, 48, 700);
+      text-align: left;
     }
   }
   &__list {
@@ -116,8 +131,10 @@
   &__img {
     grid-area: image;
     display: block;
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    width: 60vw;
+    height: 100%;
+    object-fit: cover;
     @media (max-width: 480px) {
       max-width: 300px;
       margin-left: auto;
