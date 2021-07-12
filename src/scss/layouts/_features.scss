@@ -12,61 +12,55 @@
     background-color: #f4f4f4;
   }
   &__container {
-    padding-right: 0; //уточнить
+    padding-right: 0;
   }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "list" "image";
-
     @media (min-width: 993px) {
-      grid-template-columns: minmax(500px, 540px) 1fr;
-      // grid-template-rows: 88px auto;
+      grid-template-columns: 1fr, 1fr;
       grid-template-areas:
         "list title"
         "list image";
       column-gap: 2%;
     }
-
     @media (min-width: 993px) and(max-width:1115px) {
       grid-template-rows: 60px auto;
     }
     @media (min-width: 1116px) {
       grid-template-rows: 88px auto;
-    }
-
-    @media (min-width: 1197px) {
-      // grid-template-rows: 88px auto;
       column-gap: 1%;
     }
   }
   &__title {
     grid-area: title;
     margin-bottom: 36px;
-    padding-right: 10px; //уточнить
+    padding-right: 10px;
     @include font(38, $accent-color, 32, 700);
     @media (min-width: 481px) and (max-width: 992px) {
       margin-bottom: 50px;
       @include font(44, $accent-color, 42, 700);
     }
     @media (min-width: 993px) and(max-width:1115px) {
-      @include font(50, $accent-color, 38, 700);
+      @include font(25, $accent-color, 38, 700);
       text-align: left;
     }
     @media (min-width: 1116px) {
-      @include font(50, $accent-color, 48, 700);
+      @include font(35, $accent-color, 48, 700);
       text-align: left;
     }
   }
   &__list {
     grid-area: list;
     margin-bottom: 80px;
-    padding-right: 10px; //уточнить
+    padding-right: 10px;
     @media (min-width: 481px) {
       margin-bottom: 88px;
       text-align: left;
     }
     @media (min-width: 993px) {
+      width: 500px;
       padding-right: 0;
       margin-bottom: 0;
     }
@@ -130,7 +124,6 @@
   }
   &__img {
     grid-area: image;
-    display: block;
     width: 100%;
     height: auto;
     @media (max-width: 480px) {
@@ -145,8 +138,8 @@
       max-width: 677px;
       margin-left: auto;
     }
-    @media (min-width: 993px) {
-      width: 60vw;
+    @media (min-width: 993px) and (max-width: 1220px) {
+      width: auto;
       height: 100%;
       object-fit: cover;
     }
