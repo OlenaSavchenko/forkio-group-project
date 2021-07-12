@@ -131,10 +131,8 @@
   &__img {
     grid-area: image;
     display: block;
-    // width: 100%;
-    width: 60vw;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     @media (max-width: 480px) {
       max-width: 300px;
       margin-left: auto;
@@ -146,6 +144,11 @@
     @media (min-width: 481px) and (max-width: 992px) {
       max-width: 677px;
       margin-left: auto;
+    }
+    @media (min-width: 993px) {
+      width: 60vw;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
