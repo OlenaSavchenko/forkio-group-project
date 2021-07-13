@@ -4,10 +4,10 @@
 
 Simple landing with responsive
 
-### Teamwork
+### Teamwork:
 
 [Olena Savchenko](https://github.com/OlenaSavchenko) - "Here is what you get" & "Fork Subscription Pricing" sections, "Revolutionary Editor" block
 
 [Yuliya Boiko](https://github.com/BoikoYV) - "People Are Talking About Fork" & header sections, gulpfile.js
 
-### Working page:
+### [Working page](https://boikoyv.github.io/forkio-project/)
