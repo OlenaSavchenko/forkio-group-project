@@ -1,12 +1,15 @@
 # Second step-project in DAN-IT
 
-###HTML5, SCSS, JS(ES6), Gulp
-_Simple landing with responsive_
+### HTML5, SCSS, JS(ES6), Gulp
 
-######Teamwork
+Simple landing with responsive
+
+_Teamwork_
+
 Collaborators:
+
 [Olena Savchenko](https://github.com/OlenaSavchenko) - Features & Pricing sections
 
 Yuliya Boiko - People Are Talking About Fork & Header sections
 
-Working page:
+### Working page:
