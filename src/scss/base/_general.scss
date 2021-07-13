@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
+html{
+  min-width: 320px;
+}
+
 .body-wrapper {
   font-family: $main-font-fam;
 }
+
 html {
   min-width: 320px;
 }
@@ -14,3 +19,4 @@ html {
   padding: 0 10px;
   margin: 0 auto;
 }
+
