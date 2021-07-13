@@ -1,0 +1,14 @@
+@mixin font($lh, $color, $fz: 16, $fw: 400) {
+  line-height: #{$lh}px;
+  font-size: #{$fz}px;
+  color: $color;
+  font-weight: $fw;
+}
+
+@mixin btn-styles($bg-color, $text-color, $fw: 400, $border-rad: 40) {
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: $fw;
+  border-radius: #{$border-rad}px;
+  transition: 0.3s;
+}

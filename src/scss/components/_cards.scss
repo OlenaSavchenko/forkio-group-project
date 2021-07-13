@@ -1,0 +1,175 @@
+.cards {
+  @media (min-width: 620px) {
+    display: grid;
+    justify-content: center;
+  }
+  @media (min-width: 620px) and (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 25px;
+  }
+  @media (min-width: 993px) {
+    align-items: center;
+    justify-items: center;
+  }
+  @media (min-width: 993px) and (max-width: 1134px) {
+    grid-template-columns: repeat(2, minmax(227px, 257px)) 280px minmax(
+        227px,
+        257px
+      );
+    column-gap: 5px;
+  }
+  @media (min-width: 1135px) {
+    grid-template-columns: repeat(2, minmax(227px, 257px)) 299px minmax(
+        227px,
+        257px
+      );
+    justify-content: space-between;
+  }
+  &__item {
+    padding-bottom: 36px;
+    width: 227px;
+    background-color: #ffffff1c;
+    text-align: center;
+    @media (max-width: 619px) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 620px) and (max-width: 992) {
+      width: 257px;
+    }
+    //return default card`s size to 257px (on media from 993px to 1134px default size was 227px)
+    @media (min-width: 1135px) {
+      width: 257px;
+    }
+    //change cards position on different screen sizes (for adaptive layout and correct margins between cards)
+    &:not(:last-child) {
+      @media (max-width: 619px) {
+        margin-bottom: 18px;
+      }
+      @media (min-width: 993px) and (max-width: 1134px) {
+        justify-self: left;
+      }
+    }
+    &:first-child {
+      @media (min-width: 620px) and (max-width: 992px) {
+        justify-self: right;
+      }
+    }
+    &:last-child {
+      @media (min-width: 620px) and (max-width: 992px) {
+        align-self: center;
+      }
+      @media (min-width: 993px) and (max-width: 1134px) {
+        justify-self: right;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    padding: 36px 0;
+    background-color: #ffffff0f;
+    @include font(24, $light-text-color, 24);
+    text-transform: uppercase;
+  }
+  &__price {
+    margin-bottom: 20px;
+    @include font(62, $light-text-color, 60);
+    &--value {
+      font-weight: 700;
+    }
+    @media (min-width: 620px) {
+      @include font(90, $light-text-color, 60);
+    }
+  }
+  &__period {
+    margin-bottom: 38px;
+    @include font(16, $light-text-color, 14);
+    text-transform: uppercase;
+  }
+  &__legal {
+    margin-bottom: 36px;
+    @include font(28, $light-text-color, 16);
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 auto 30px;
+      width: 60px;
+      height: 5px;
+      background-color: $accent-color;
+    }
+    @media (min-width: 620px) {
+      @include font(18, $light-text-color, 16);
+    }
+    &--student {
+      @media (min-width: 620px) {
+        margin-bottom: 54px;
+      }
+      @media (min-width: 993px) {
+        margin-bottom: 48px;
+        &::before {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+  &__link {
+    @include btn-styles(#ffffff26, $light-text-color);
+    display: inline-block;
+    padding: 14px 36px;
+    @include font(15, $light-text-color, 15);
+    text-transform: uppercase;
+    &:hover {
+      @extend%btn-hover;
+      border: none;
+    }
+  }
+  //styles for bigger card
+  &__item--accent {
+    padding-bottom: 47px;
+    background-color: #463048d6;
+    @media (max-width: 992px) {
+      width: 299px;
+    }
+    @media (min-width: 620px) and (max-width: 992px) {
+      justify-self: right;
+    }
+    @media (min-width: 993px) and (max-width: 1134px) {
+      width: 280px;
+    }
+    @media (min-width: 1135px) {
+      width: 299px;
+    }
+    .cards__title {
+      margin-bottom: 14px;
+      padding: 43px 0;
+      background-color: #0000001c;
+    }
+    .cards__price {
+      margin-bottom: 16px;
+      @include font(84, $light-text-color, 82);
+      @media (min-width: 620px) {
+        @include font(90, $light-text-color, 82);
+      }
+    }
+    .cards__period {
+      margin-bottom: 46px;
+    }
+    .cards__legal {
+      margin-bottom: 83px;
+      @include font(32, $light-text-color, 16);
+      &::before {
+        margin-bottom: 40px;
+      }
+      @media (min-width: 620px) {
+        @include font(18, $light-text-color, 16);
+      }
+    }
+    .cards__link {
+      padding: 18px 48px;
+      @include font(18, $light-text-color, 16);
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}

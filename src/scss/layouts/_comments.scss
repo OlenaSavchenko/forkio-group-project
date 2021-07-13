@@ -1,0 +1,102 @@
+.comments {
+   padding-top: 108px;
+   background: url("../img/comments/jpg/comments-bg.jpg") no-repeat;
+   background-size: cover;
+
+   &__title {
+      @include font(50, $light-text-color, 48, 700);
+      margin-bottom: 82px;
+      text-align: center;
+
+      @media (max-width: 993px) {
+         margin-bottom: 88px;
+         font-size: 42px;
+         line-height: 44px;
+      }
+
+      @media (max-width: 480px) {
+         margin-bottom: 53px;
+         font-size: 36px;
+         line-height: 48px;
+      }
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(287px, 315px));
+      justify-content: space-between;
+      row-gap: 82px;
+      margin-bottom: 114px;
+
+      @media (max-width: 992px) {
+         row-gap: 55px;
+         justify-content: space-around;
+         grid-template-columns: repeat(2, minmax(200px, 315px));
+         column-gap: 15px;
+         margin-bottom: 68px;
+      }
+      @media (max-width: 480px) {
+         grid-template-columns: minmax(260px, 315px);
+         column-gap: 42px;
+         margin-bottom: 38px;
+      }
+   }
+
+   &__item {
+      display: grid;
+      grid-template-rows: 65px auto;
+      row-gap: 22px;
+   }
+
+   &__img {
+      align-items: center;
+      margin: 0 auto;
+      align-self: center;
+      max-width: 90%;
+   }
+
+   &__text {
+      font-family: $descr-font-fam;
+      @include font(24, $light-text-color, 16, 700);
+      font-style: italic;
+      text-align: center;
+   }
+
+   &__info {
+      @include font(21, #a291a5, 14);
+      font-family: $descr-font-fam;
+      max-width: 887px;
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      position: relative;
+
+      // Нижняя полосочка
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 5px;
+         left: calc(50% - 390px);
+         width: 780px;
+         height: 2px;
+         background-color: #645766;
+
+         @media (max-width: 992px) {
+            left: calc(50% - 277px);
+            width: 555px;
+         }
+         @media (max-width: 560px) {
+            left: calc(50% - 122px);
+            width: 245px;
+         }
+      }
+   }
+
+   @media (max-width: 992px) {
+      padding-top: 85px;
+   }
+
+   @media (max-width: 480px) {
+      padding-top: 55px;
+   }
+}

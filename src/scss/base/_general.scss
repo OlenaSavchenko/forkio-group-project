@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+.body-wrapper {
+  font-family: $main-font-fam;
+}
+
+//контейнер увеличен на ширину падингов
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
