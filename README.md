@@ -6,8 +6,8 @@ Simple landing with responsive
 
 ### Teamwork
 
-[Olena Savchenko](https://github.com/OlenaSavchenko) - Features & Pricing sections
+[Olena Savchenko](https://github.com/OlenaSavchenko) - "Here is what you get" & "Fork Subscription Pricing" sections, "Revolutionary Editor" block
 
-[Yuliya Boiko](https://github.com/BoikoYV) - People Are Talking About Fork & Header sections
+[Yuliya Boiko](https://github.com/BoikoYV) - "People Are Talking About Fork" & header sections, gulpfile.js
 
 ### Working page:
