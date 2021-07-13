@@ -1,0 +1,22 @@
+<section class="features">
+  <div class="container features__container">
+    <div class="features__wrapper">
+      <ul class="features__list">
+        @@loop("./components/features/features-item.html",
+        "./components/features/features-item.json")
+      </ul>
+
+      <h2 class="features__title">&ltHere is what you get&gt</h2>
+      <img
+        srcset="
+          ./dist/img/features/png/features-mb.png     300w,
+          ./dist/img/features/png/features-tablet.png 677w
+        "
+        sizes="(min-width: 768px) 677px, 300px"
+        src="./dist/img/features/png/features-mb.png"
+        alt="code-editor-picture"
+        class="features__img"
+      />
+    </div>
+  </div>
+</section>
