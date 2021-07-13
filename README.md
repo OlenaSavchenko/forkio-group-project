@@ -4,9 +4,7 @@
 
 Simple landing with responsive
 
-_Teamwork_
-
-Collaborators:
+### Teamwork
 
 [Olena Savchenko](https://github.com/OlenaSavchenko) - Features & Pricing sections
 
