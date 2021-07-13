@@ -10,4 +10,6 @@ Simple landing with responsive
 
 [Yuliya Boiko](https://github.com/BoikoYV) - "People Are Talking About Fork" & header sections, gulpfile.js
 
-### [Working page](https://boikoyv.github.io/forkio-project/)
+### Working page:
+
+[Look to the landing](https://boikoyv.github.io/forkio-project/)
