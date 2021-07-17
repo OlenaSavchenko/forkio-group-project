@@ -2,6 +2,7 @@
    padding-top: 108px;
    background: url("../img/comments/jpg/comments-bg.jpg") no-repeat;
    background-size: cover;
+   background-position: center;
 
    &__title {
       @include font(50, $light-text-color, 48, 700);
@@ -37,7 +38,6 @@
       }
       @media (max-width: 480px) {
          grid-template-columns: minmax(260px, 315px);
-         column-gap: 42px;
          margin-bottom: 38px;
       }
    }
@@ -97,6 +97,8 @@
    }
 
    @media (max-width: 480px) {
+      background: url("../img/comments/jpg/comments-bg-sm.jpg") no-repeat;
+      background-size: cover;
       padding-top: 55px;
    }
 }
