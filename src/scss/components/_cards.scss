@@ -1,10 +1,18 @@
 .cards {
-  @media (min-width: 620px) {
+  @media (min-width: 481px) {
     display: grid;
     justify-content: center;
   }
-  @media (min-width: 620px) and (max-width: 992px) {
+  @media (min-width: 481px) and (max-width: 992px) {
     grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 481px) and (max-width: 499px) {
+    grid-gap: 8px 7px;
+  }
+  @media (min-width: 500px) and (max-width: 619px) {
+    grid-gap: 15px 13px;
+  }
+  @media (min-width: 620px) and (max-width: 992px) {
     grid-gap: 30px 25px;
   }
   @media (min-width: 993px) {
@@ -27,23 +35,32 @@
   }
   &__item {
     padding-bottom: 36px;
-    width: 227px;
     background-color: #ffffff1c;
     text-align: center;
-    @media (max-width: 619px) {
+    @media (max-width: 480px) {
       margin: 0 auto;
     }
-
-    @media (min-width: 620px) and (max-width: 992) {
+    @media (min-width: 320px) and (max-width: 480px) {
       width: 257px;
     }
-    //return default card`s size to 257px (on media from 993px to 1134px default size was 227px)
+    @media (min-width: 481px) and (max-width: 549px) {
+      width: 200px;
+    }
+    @media (min-width: 550px) and (max-width: 619px) {
+      width: 227px;
+    }
+    @media (min-width: 620px) and (max-width: 992px) {
+      width: 257px;
+    }
+    @media (min-width: 993px) and (max-width: 1134px) {
+      width: 227px;
+    }
     @media (min-width: 1135px) {
       width: 257px;
     }
     //change cards position on different screen sizes (for adaptive layout and correct margins between cards)
     &:not(:last-child) {
-      @media (max-width: 619px) {
+      @media (max-width: 480px) {
         margin-bottom: 18px;
       }
       @media (min-width: 993px) and (max-width: 1134px) {
@@ -51,12 +68,12 @@
       }
     }
     &:first-child {
-      @media (min-width: 620px) and (max-width: 992px) {
+      @media (min-width: 481px) and (max-width: 992px) {
         justify-self: right;
       }
     }
     &:last-child {
-      @media (min-width: 620px) and (max-width: 992px) {
+      @media (min-width: 481px) and (max-width: 992px) {
         align-self: center;
       }
       @media (min-width: 993px) and (max-width: 1134px) {
@@ -70,6 +87,9 @@
     background-color: #ffffff0f;
     @include font(24, $light-text-color, 24);
     text-transform: uppercase;
+    @media (min-width: 481px) and (max-width: 549px) {
+      font-size: 22px;
+    }
   }
   &__price {
     margin-bottom: 20px;
@@ -97,11 +117,11 @@
       height: 5px;
       background-color: $accent-color;
     }
-    @media (min-width: 620px) {
+    @media (min-width: 481px) {
       @include font(18, $light-text-color, 16);
     }
     &--student {
-      @media (min-width: 620px) {
+      @media (min-width: 481px) {
         margin-bottom: 54px;
       }
       @media (min-width: 993px) {
@@ -127,11 +147,20 @@
   &__item--accent {
     padding-bottom: 47px;
     background-color: #463048d6;
-    @media (max-width: 992px) {
+    @media (max-width: 480px) {
       width: 299px;
     }
-    @media (min-width: 620px) and (max-width: 992px) {
+    @media (min-width: 481px) and (max-width: 992px) {
       justify-self: right;
+    }
+    @media (min-width: 481px) and (max-width: 549px) {
+      width: 227px;
+    }
+    @media (min-width: 550px) and (max-width: 619px) {
+      width: 257px;
+    }
+    @media (min-width: 620px) and (max-width: 992px) {
+      width: 299px;
     }
     @media (min-width: 993px) and (max-width: 1134px) {
       width: 280px;
@@ -147,7 +176,7 @@
     .cards__price {
       margin-bottom: 16px;
       @include font(84, $light-text-color, 82);
-      @media (min-width: 620px) {
+      @media (min-width: 481px) {
         @include font(90, $light-text-color, 82);
       }
     }
@@ -160,7 +189,7 @@
       &::before {
         margin-bottom: 40px;
       }
-      @media (min-width: 620px) {
+      @media (min-width: 481px) {
         @include font(18, $light-text-color, 16);
       }
     }

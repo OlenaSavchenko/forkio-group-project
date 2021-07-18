@@ -3,16 +3,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // @media (max-width: 480px) {
+  //   justify-content: space-between;
+  // }
 
   &__item {
-    margin: 0 10px 0 0;
+    // margin: 0 10px 0 0;
     &:hover .github-counter__link--graphic {
       background-color: #a8b5c225;
+    }
+  }
+  &__item:first-child {
+    @media (max-width: 480px) {
+      margin-right: 10px;
     }
   }
   &__item:not(:last-child) {
     @media (max-width: 480px) {
       margin-bottom: 20px;
+    }
+    @media (min-width: 481px) {
+      margin: 0 10px 0 0;
     }
   }
   &__item:last-child {
