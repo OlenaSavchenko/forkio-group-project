@@ -3,12 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // @media (max-width: 480px) {
-  //   justify-content: space-between;
-  // }
-
   &__item {
-    // margin: 0 10px 0 0;
     &:hover .github-counter__link--graphic {
       background-color: #a8b5c225;
     }
